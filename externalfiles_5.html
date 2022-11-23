@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="externalfiles_5.css" rel="stylesheet">
+    <script src="utilities.js"></script>
+    <script>
+        function initialize() {
+            numberOutput = document.getElementById("numout"); 
+            rndNum = 0; 
+
+            display(); 
+        }
+
+        function changeNumber() {
+            rndNum = getRandomInteger(1, 10);
+            display(); 
+        }
+
+        function display() {
+            numberOutput.innerHTML = rndNum; 
+        }
+    </script>
+</head>
+<body onload="initialize();">
+    <h1>This is my great page about external files</h1>
+    <p id="numout"></p>
+    <button onclick="changeNumber();">Change the number</button>
+</body>
+</html>
